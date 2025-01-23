@@ -2,10 +2,12 @@ package com.tekarch.TafBookingService.service;
 
 import com.tekarch.TafBookingService.model.BookingRequest;
 import com.tekarch.TafBookingService.model.BookingResponse;
+import com.tekarch.TafBookingService.model.Flight;
 import com.tekarch.TafBookingService.resttemplate.BookingRestTemplate;
 import com.tekarch.TafBookingService.service.Interface.BookingServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -54,7 +56,6 @@ public class BookingServiceImpl implements BookingServiceInterface {
 
     public BookingResponse cancelBooking(Long bookingId) {
         return bookingTemplate.getBooking(bookingId);
-
 
     }
 
